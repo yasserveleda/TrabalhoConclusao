@@ -2,8 +2,9 @@
 
     <div class="row section-header has-bottom-sep" data-aos="fade-up">
         <div class="col-full">
-            <h3 class="subhead subhead--dark">Hello There</h3>
-            <h1 class="display-1 display-1--light">We Are Glint</h1>
+            <!-- <h3 class="subhead subhead--dark">Hello There</h3> -->
+            <h3 class="subhead subhead--dark">Conheça-nos</h3>
+            <h1 class="display-1 display-1--light">Quem Somos</h1>
         </div>
     </div>
 
@@ -19,23 +20,55 @@
             
         <div class="col-block stats__col ">
             <div class="stats__count">127</div>
-            <h5>Awards Received</h5>
-        </div>
-        <div class="col-block stats__col">
-            <div class="stats__count">1505</div>
-            <h5>Cups of Coffee</h5>
+            <h5>Projetos Sociais</h5>
         </div>
         <div class="col-block stats__col">
             <div class="stats__count">109</div>
-            <h5>Projects Completed</h5>
+            <h5>Causas Humanitárias</h5>
+        </div>
+        <div class="col-block stats__col">
+            <div class="stats__count">1505</div>
+            <h5>Beneficários</h5>
         </div>
         <div class="col-block stats__col">
             <div class="stats__count">102</div>
-            <h5>Happy Clients</h5> 
+            <h5>ONG`s</h5> 
         </div>
 
     </div>
 
     <div class="about__line"></div>
+
+</section>
+
+<section id='services' class="s-services">
+
+    <div class="row section-header has-bottom-sep" data-aos="fade-up">
+        <div class="col-full">
+            <h3 class="subhead">Alguns Projetos</h3>
+            <h1 class="display-2">Conheça projetos que já estão obtendo resultados significativos</h1>
+            <!-- <h1 class="display-2">We’ve got everything you need to launch and grow your business</h1> -->
+        </div>
+    </div>
+
+    <div class="row services-list block-1-2 block-tab-full">
+
+        <div class="col-block service-item" data-aos="fade-up" *ngFor="let projeto of projetos; let i = index">
+            <div class="service-icon">
+                <!-- <i class="icon-paint-brush"></i> -->
+                <img src="assets/img/{{projeto.url_img}}">
+            </div>
+            <div class="service-text">
+                <h3 class="h2"> {{ projeto.titulo }} </h3>
+                <p> {{ projeto.descricao }} </p>
+            </div>
+            <div class="div-btn-go">
+                <button class="btn btn-small">
+                    Ver mais
+                </button>
+            </div>
+        </div>
+
+    </div>
 
 </section>
