@@ -42,7 +42,8 @@ export class ProjetoComponent implements OnInit {
   }
 
   criarProjeto() {
-    this.projetoService.criarProjeto().subscribe( response => {
+    const obj = {};
+    this.projetoService.criarProjeto(obj).subscribe( response => {
         console.log(response);
       },
       error => {

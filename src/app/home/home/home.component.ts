@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   public projetos: any[];
+  title = 'Glint';
 
   constructor() {
     this.projetos = [

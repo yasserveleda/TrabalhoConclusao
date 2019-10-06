@@ -1,16 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProjetoComponent } from './projeto.component';
+import { AdicionarComponent } from './adicionar.component';
+import { ProjetoSerivce } from '../projeto/projeto.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ProjetoSerivce } from './projeto.service';
 
-describe('ProjetoComponent', () => {
-  let component: ProjetoComponent;
-  let fixture: ComponentFixture<ProjetoComponent>;
+describe('AdicionarComponent', () => {
+  let component: AdicionarComponent;
+  let fixture: ComponentFixture<AdicionarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProjetoComponent ],
+      declarations: [ AdicionarComponent ],
       imports: [HttpClientTestingModule],
       providers: [ProjetoSerivce],
     })
@@ -18,7 +18,7 @@ describe('ProjetoComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProjetoComponent);
+    fixture = TestBed.createComponent(AdicionarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

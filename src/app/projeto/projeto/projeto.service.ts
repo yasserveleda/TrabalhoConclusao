@@ -39,17 +39,14 @@ export class ProjetoSerivce {
         return this.http.get<myData>(url_responsaveis, this.httpOptions);
     }
 
-    criarProjeto() {
-        const titulo = `Cavalos para Órfãos - novo telhado`;
-        const descricao = `Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis. Sunt suscipit voluptas ipsa in tempora esse soluta sint.`;
-
-        const projeto = {
-            // 'fields': {
-            //     'TITULO': titulo,
-            //     'DESCRICAO': descricao
-            // }
+    criarProjeto(projeto) {
+        const novoProjeto = {
+            'fields': {
+                'TITULO': projeto.nomeProjeto,
+                'DESCRICAO': projeto.descricao
+            }
         };
 
-        return this.http.post<myData>(`${ this.url_api }/PROJETO`, projeto, this.httpOptions);
+        return this.http.post<myData>(`${ this.url_api }/PROJETO`, novoProjeto, this.httpOptions);
     }
 }
