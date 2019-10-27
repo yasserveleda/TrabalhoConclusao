@@ -1,0 +1,31 @@
+.content-section {
+    .container {
+        .row {
+            .mx-auto {
+                .input-group {
+                    input {
+                        height: 50px;
+                    }
+                }
+            }
+            
+            .card {
+                .no-gutters {
+                    .image {
+                        background-size: cover !important;
+                    }
+                }
+                .card-body {
+                    text-align: right;
+            
+                    .card-title {
+                        text-align: left;
+                    }
+                    p {
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+}
