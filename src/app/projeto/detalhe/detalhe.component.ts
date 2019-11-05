@@ -11,20 +11,20 @@ export class DetalheComponent implements OnInit {
   id: string;
 
   constructor(private route: ActivatedRoute) {
+  }
+
+  ngOnInit() {
     this.route.params.subscribe(
-      response => {
-        console.log(response);
-        if (response.id) {
-          this.id = response.id;
+      params => {
+        console.log(params);
+        if (params.id) {
+          this.id = params.id;
         }
       },
       error => {
         console.log(error);
       }
     );
-  }
-
-  ngOnInit() {
   }
 
 }
